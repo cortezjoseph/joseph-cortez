@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    transition: all 0.5s ease;
+    
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, rgba(8, 131, 150, 0.548));
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, #ded8d3);
+}
+.field{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+} 
+.field span{
+    text-transform: uppercase;
+    display: block;
+}
+.text1{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 130px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-top: -60px;
+    position: relative;
+    animation: text 5s 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(OF/bp.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+.text2{
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 130px;
+    font-weight: 700;
+    margin-top: -40px;
+    letter-spacing: 8px;
+    position: relative;
+    animation: text 5s 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(OF/bp.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+.text3{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    color: #ffdead;
+}
+.flyleaf{
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(25, 112, 153, 0.364);
+      background-size: cover;
+      background-position: center;
+      padding: 0.8%;
+      position: relative;
+
+}
+video{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100vh;
+	width: auto;
+	height: auto;
+    object-fit: cover;
+	z-index: -1;
+		
+}
+@media (min-aspect-ratio:16/9){
+    video{
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-aspect-ratio:16/9){
+	video{
+		width: auto;
+		height: 100%
+	}
+}
+#bottom{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.flyleaf #chain{
+    margin-top: 42%;
+    margin-left: 25px;
+}
+.flyleaf #chain #frontbtn{
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #93201a5b;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+}
+
+.social-icons{
+    position: absolute;
+    right: 3%;
+    bottom: 5%;
+
+}
+.social-icons #fronticons{
+    width: 25px;
+    display: inline-block;
+    margin: 25px 10px;
+    
+}
+section{
+    height: 670px;
+}
+.nested{
+    margin-left: 115px;
+    margin-top: 65px;
+}
+.nested .box{
+    position: relative;
+    width: 400px;
+    height: 63 0px;
+    background: #ddd;
+    margin: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    }
+.nested .box:before{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: #fff;
+    z-index: -1;
+}
+.nested .box:after{
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: #fff;
+    z-index: -2;
+}
+.nested .box:nth-child(1)::before,
+.nested .box:nth-child(1)::after{
+    background: linear-gradient(235deg, #1a3e93, #010615, #306bf3);
+}
+.nested .box:nth-child(2)::before,
+.nested .box:nth-child(2)::after{
+    background: linear-gradient(235deg, #1a3e93, #010615, #306bf3);
+}
+.nested .box:nth-child(3)::before,
+.nested .box:nth-child(3)::after{
+    background: linear-gradient(235deg, #1a3e93, #010615, #306bf3);
+}
+.nested .box .imgBox{
+    position: relative;
+    overflow: hidden;
+    }
+.nested  .box .imgBox  img{
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 2s;
+    }
+.nested .box:hover .imgBox img{
+    transform: scale(1.2);
+    }
+.nested .box .details{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(25, 112, 153, 0.364);
+    transform: scaleY(0); 
+    transition: transform .5s;
+    color: white;
+    }
+.nested .box:hover .details{
+    transform: scaleY(1);
+    }
+.nested .box .details .details1 img{
+    height: 200px;
+    width: 130px;
+    margin-top: 180px;
+    margin-left: 125px;
+    filter: grayscale(1);
+}
+.nested .box .details .details1 img:hover{
+    filter: grayscale(0);
+}
+#exampleModal1 .modal-dialog{
+    border: 5px solid radial-gradient(circle at top, #F0EABE , #1f2323)
+
+}
+#exampleModal1 .modal-dialog .modal-content .modal-header1 img{
+    width: 100%;
+    height: 150px;
+
+}
+#exampleModal1 .modal-dialog .modal-content .header img{
+    width: 110px;
+    height: 120px;
+    margin-top: -60px;
+    border-radius: 50%;
+    margin-left: 190px;
+    border: 2px solid rgba(7, 46, 101, 0.967);
+    
+}
+#exampleModal1 .modal-dialog .modal-content{
+    background-color: rgba(33, 59, 185, 0.541);
+}
+#exampleModal1 .modal-dialog .modal-content .modal-body h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    color: #ddd;
+    text-align: center;
+}
+#exampleModal1 .modal-dialog .modal-content .modal-body h1 a{
+    font-size: 15px;
+}
+#exampleModal1 .modal-dialog .modal-content .modal-body img{
+    width: 120px;
+    height: 100px;
+    margin-left: 172px;
+}
+#exampleModal2 .modal-dialog .modal-content{
+    background-color: rgba(33, 59, 185, 0.541);
+}
+#exampleModal2 .modal-dialog .modal-content img{
+    width: 30%;
+    height: 90vh;
+
+}
+#exampleModal2 .modal-dialog .modal-content #design1{
+    width: 160px;
+    height: 160px;
+    margin-left: 45px;
+    margin-top: 25px;
+    position: absolute;
+}
+#exampleModal2 .modal-dialog .modal-content #design2{
+    width: 180px;
+    height: 180px;
+    margin-left: 35px;
+    margin-top: 255px;
+    position: absolute;
+}
+#exampleModal2 .modal-dialog .modal-content #design3{
+    width: 140px;
+    height: 140px;
+    margin-left: 55px;
+    margin-top: 465px;
+    position: absolute;
+}
+#exampleModal2 .modal-dialog .modal-content .info{
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 237px;
+}
+#exampleModal2 .modal-dialog .modal-content .info .line{
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    top: 200px;
+    width: 24em;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+.anim-typewriter{
+    animation: typewriter 3s steps(150) 1s 1 normal both,
+    blinkTextCursor 600ms steps(150)infinite normal;
+
+}
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to{
+        width: 35em;
+    }
+}
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255,255,255,0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+#exampleModal3 .modal-dialog .card-group .card{
+    background-color: rgba(33, 59, 185, 0.541);
+    text-align: center;
+    color: white;
+    
+}
+#exampleModal3 .modal-dialog .card-group .card .card-title{
+    font-family: 'Orbitron', sans-serif;
+}
+#exampleModal3 .modal-dialog .card-group .card .card-text{
+    font-family: 'Orbitron', sans-serif;
+}
